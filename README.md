@@ -10,5 +10,7 @@ Gulag Tell will send a tell to the people asking them to fill out the survey.<br
 Soft Bitch GC will send a message to the guild chat asking everyone to fill out the survey.<br>
 Recruit Trade will spam the recruiting message to the trade chat.<br>
 <br>
+If you close the addon you can open it again by typing /hsdemo<br>
+<br>
 To Install:<br>
 You can download the zip file and unpack it into your addons folder like every other addon.
