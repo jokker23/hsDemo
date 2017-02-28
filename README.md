@@ -1,5 +1,5 @@
 # hsDemo
-Hexuas Sarassment Demographics Addon
+Hexual Sarassment Demographics Addon
 
 
 To use:<br>
