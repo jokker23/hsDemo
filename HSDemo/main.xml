@@ -1,0 +1,104 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	
+  <Script File="lua/main.lua"/>
+  <Script File="lua/cli.lua"/>  
+  <Frame name="HSDemo" parent="UIParent" frameStrata="HIGH" toplevel="true" hidden="false" enableMouse="true" movable="true">
+	<Size>
+		<RelDimension x="0.0955" y="0.2"/>
+    </Size>
+	<Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+		<TileSize>
+			<AbsValue val="32"/>
+		</TileSize>
+		<EdgeSize>
+			<AbsValue val="16"/>
+		</EdgeSize>
+		<BackgroundInsets>
+			<AbsInset left="5" right="5" top="5" bottom="5"/>
+		</BackgroundInsets>		
+    </Backdrop>	
+    <Anchors>
+      <Anchor point="CENTER" />
+    </Anchors>
+	<Scripts>
+		<OnLoad function="onload"/>
+		<OnUpdate function="onupdate"/>
+		<OnMouseDown>
+			HSDemo:StartMoving();
+		</OnMouseDown>
+		<OnMouseUp>
+			HSDemo:StopMovingOrSizing();
+		</OnMouseUp>		
+   </Scripts>
+	<Frames>		
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Close">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="BOTTOMLEFT">
+					<Offset x="12" y="16"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> self:GetParent():Hide(); </OnClick>
+			</Scripts>
+		</Button>
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Check Online">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="12" y="-16"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> checksurvey(); </OnClick>
+			</Scripts>
+		</Button>
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Gulag Spam GC">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="12" y="-48"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> gulagGC(); </OnClick>
+			</Scripts>
+		</Button>
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Gulag Tell">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="12" y="-80"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> gulagT(); </OnClick>
+			</Scripts>
+		</Button>
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Soft Bitch GC">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="12" y="-112"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> remindGC(); </OnClick>
+			</Scripts>
+		</Button>
+		<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Recruit Trade">
+			<Size x="120" y="21"/>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="12" y="-144"/>
+				</Anchor> 
+			</Anchors>
+			<Scripts>
+				<OnClick> recruitT(); </OnClick>
+			</Scripts>
+		</Button>
+	</Frames>
+</Frame>   
+</Ui>
