@@ -4,6 +4,7 @@
 	
   <Script File="lua/main.lua"/>
   <Script File="lua/cli.lua"/>  
+  <Script File="lua/guildlink.lua"/>  
   <Frame name="HSDemo" parent="UIParent" frameStrata="HIGH" toplevel="true" hidden="false" enableMouse="true" movable="true">
 	<Size>
 		<RelDimension x="0.0955" y="0.2"/>
