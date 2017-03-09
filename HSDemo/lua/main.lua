@@ -23,7 +23,7 @@ function gulagGC()
 		if online==true then					
 			if string.match(officernote, "HSDSc") then					
 			else
-				SendChatMessage(fullName, "Has not completed the survey.","GUILD",nil,"GUILD")
+				SendChatMessage(fullName.." Has not completed the survey.","GUILD",nil,"GUILD")
 			end
 		end	
 	end
